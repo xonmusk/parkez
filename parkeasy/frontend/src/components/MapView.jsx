@@ -30,13 +30,16 @@ export default function MapView({ parkings, selectedParking, onSelect, userPosit
   return (
     <div className={`relative flex-1 ${pickMode ? 'cursor-crosshair' : ''}`}>
       {loading && (
-        <div className="absolute inset-0 z-[999] bg-navy-900/60 flex items-center justify-center">
-          <Loader2 className="w-10 h-10 text-park-blue animate-spin" />
+        <div className="absolute inset-0 z-[999] bg-black/80 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-3">
+            <Loader2 className="w-10 h-10 text-neon-green animate-spin drop-shadow-[0_0_10px_#00ff41]" />
+            <span className="text-neon-green/60 text-xs tracking-[0.3em] uppercase">Scanning...</span>
+          </div>
         </div>
       )}
       {pickMode && (
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 z-[1000] bg-park-blue text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
-          Click on the map to set parking location
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 z-[1000] bg-black border border-neon-green/50 text-neon-green px-4 py-2 rounded shadow-neon text-sm font-mono animate-neon-pulse">
+          [ CLICK MAP TO SET LOCATION ]
         </div>
       )}
       <MapContainer
@@ -58,7 +61,7 @@ export default function MapView({ parkings, selectedParking, onSelect, userPosit
           <CircleMarker
             center={[userPosition.lat, userPosition.lng]}
             radius={10}
-            pathOptions={{ color: '#3b82f6', fillColor: '#3b82f6', fillOpacity: 0.6 }}
+            pathOptions={{ color: '#00ff41', fillColor: '#00ff41', fillOpacity: 0.6 }}
           />
         )}
       </MapContainer>

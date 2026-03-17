@@ -3,9 +3,9 @@ import { Loader2 } from 'lucide-react';
 import api from '../utils/api';
 
 const REPORT_OPTIONS = [
-  { status: 'available', label: 'Available', color: 'bg-park-green hover:bg-green-600' },
-  { status: 'filling', label: 'Filling Up', color: 'bg-park-yellow hover:bg-yellow-600' },
-  { status: 'full', label: 'Full', color: 'bg-park-red hover:bg-red-600' },
+  { status: 'available', label: 'OPEN', color: 'bg-neon-green hover:bg-neon-dim text-black' },
+  { status: 'filling', label: 'FILLING', color: 'bg-park-yellow hover:bg-yellow-400 text-black' },
+  { status: 'full', label: 'FULL', color: 'bg-park-red hover:bg-red-500 text-black' },
 ];
 
 export default function ReportButton({ parkingId, addToast, refetch }) {
@@ -22,11 +22,11 @@ export default function ReportButton({ parkingId, addToast, refetch }) {
     setSubmitting(true);
     try {
       await api.post(`/parkings/${parkingId}/report`, { status });
-      addToast('Report submitted!', 'success');
+      addToast('Report transmitted', 'success');
       refetch();
       setCooldown(60);
     } catch (err) {
-      addToast('Failed to submit report', 'error');
+      addToast('Transmission failed', 'error');
     } finally {
       setSubmitting(false);
     }
@@ -36,21 +36,21 @@ export default function ReportButton({ parkingId, addToast, refetch }) {
 
   return (
     <div>
-      <h3 className="text-sm font-semibold text-gray-300 mb-2">Report Status</h3>
+      <h3 className="text-[10px] font-mono font-semibold text-neon-green/50 mb-2 uppercase tracking-[0.2em]">Report Status</h3>
       <div className="flex gap-2">
         {REPORT_OPTIONS.map(opt => (
           <button
             key={opt.status}
             onClick={() => handleReport(opt.status)}
             disabled={disabled}
-            className={`flex-1 py-2 rounded-lg text-xs font-semibold text-white transition-colors ${opt.color} disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1`}
+            className={`flex-1 py-2 rounded text-[10px] font-mono font-bold transition-colors ${opt.color} disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center gap-1 uppercase tracking-wider`}
           >
             {submitting ? <Loader2 className="w-3 h-3 animate-spin" /> : opt.label}
           </button>
         ))}
       </div>
       {cooldown > 0 && (
-        <p className="text-xs text-gray-500 text-center mt-1">Wait {cooldown}s</p>
+        <p className="text-[10px] text-neon-green/30 text-center mt-1 font-mono tracking-wider">cooldown: {cooldown}s</p>
       )}
     </div>
   );

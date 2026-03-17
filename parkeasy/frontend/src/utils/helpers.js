@@ -17,13 +17,19 @@ export function formatDistance(km) {
 }
 
 export function statusColor(status) {
-  if (status === 'full') return '#ef4444';
-  if (status === 'filling') return '#eab308';
-  return '#22c55e';
+  if (status === 'full') return '#ff003c';
+  if (status === 'filling') return '#ccff00';
+  return '#00ff41';
 }
 
 export function statusBgClass(status) {
   if (status === 'full') return 'bg-park-red';
   if (status === 'filling') return 'bg-park-yellow';
   return 'bg-park-green';
+}
+
+export function statusGlow(status) {
+  if (status === 'full') return 'shadow-neon-red';
+  if (status === 'filling') return 'shadow-neon-yellow';
+  return 'shadow-neon';
 }

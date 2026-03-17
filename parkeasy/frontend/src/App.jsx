@@ -36,13 +36,13 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-navy-900 text-gray-100">
+    <div className="h-screen flex flex-col bg-black text-green-400">
       <StatsHeader stats={stats} loading={loading} />
 
       {error && (
-        <div className="px-4 py-2 bg-red-900/40 text-red-300 text-sm flex items-center justify-between">
-          <span>Failed to load data: {error}</span>
-          <button onClick={refetch} className="text-xs underline hover:text-red-200">Retry</button>
+        <div className="px-4 py-2 bg-park-red/10 border-b border-park-red/20 text-park-red text-xs font-mono flex items-center justify-between">
+          <span>// ERROR: {error}</span>
+          <button onClick={refetch} className="text-[10px] border border-park-red/30 px-2 py-0.5 rounded hover:bg-park-red/10 uppercase tracking-wider">Retry</button>
         </div>
       )}
 

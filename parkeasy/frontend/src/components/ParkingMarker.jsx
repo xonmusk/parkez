@@ -4,7 +4,7 @@ import { statusColor } from '../utils/helpers';
 export default function ParkingMarker({ parking, onClick }) {
   const avail = parking.availability || {};
   const isP2P = parking.source === 'p2p';
-  const color = isP2P ? '#3b82f6' : statusColor(avail.status);
+  const color = isP2P ? '#00ff41' : statusColor(avail.status);
 
   return (
     <CircleMarker
@@ -13,7 +13,7 @@ export default function ParkingMarker({ parking, onClick }) {
       pathOptions={{
         color: color,
         fillColor: color,
-        fillOpacity: 0.7,
+        fillOpacity: 0.8,
         weight: 2
       }}
       eventHandlers={{
