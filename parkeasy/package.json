@@ -1,0 +1,13 @@
+{
+  "name": "parkeasy",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n BE,FE -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && node server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {"id":"p1","name":"Inorbit Mall Parking","area":"Madhapur","areaType":"mall","lat":17.4355,"lng":78.3855,"type":"mall","capacity":800,"ratePerHour":30,"address":"Inorbit Mall, Hitech City, Madhapur"},
+  {"id":"p2","name":"GVK One Mall Parking","area":"Banjara Hills","areaType":"commercial","lat":17.4239,"lng":78.4488,"type":"mall","capacity":600,"ratePerHour":40,"address":"GVK One, Road No 1, Banjara Hills"},
+  {"id":"p3","name":"Forum Sujana Mall Parking","area":"Kukatpally","areaType":"mall","lat":17.4933,"lng":78.3988,"type":"mall","capacity":500,"ratePerHour":20,"address":"Forum Sujana Mall, Kukatpally"},
+  {"id":"p4","name":"Mindspace IT Park Parking","area":"Madhapur","areaType":"it","lat":17.4412,"lng":78.3794,"type":"garage","capacity":2000,"ratePerHour":20,"address":"Raheja Mindspace, Madhapur"},
+  {"id":"p5","name":"Secunderabad Station Parking","area":"Secunderabad","areaType":"tourist","lat":17.4344,"lng":78.5013,"type":"lot","capacity":300,"ratePerHour":15,"address":"Secunderabad Railway Station"},
+  {"id":"p6","name":"Tank Bund Road Parking","area":"Tank Bund","areaType":"tourist","lat":17.4156,"lng":78.4750,"type":"street","capacity":100,"ratePerHour":10,"address":"Tank Bund Road, Hyderabad"},
+  {"id":"p7","name":"Charminar Street Parking","area":"Charminar","areaType":"tourist","lat":17.3616,"lng":78.4747,"type":"street","capacity":60,"ratePerHour":10,"address":"Near Charminar, Old City"},
+  {"id":"p8","name":"Nexus Mall Parking","area":"Kukatpally","areaType":"mall","lat":17.4845,"lng":78.3916,"type":"mall","capacity":700,"ratePerHour":25,"address":"Nexus Mall, Kukatpally"},
+  {"id":"p9","name":"Ameerpet Metro Parking","area":"Ameerpet","areaType":"commercial","lat":17.4375,"lng":78.4483,"type":"lot","capacity":150,"ratePerHour":15,"address":"Ameerpet Metro Station"},
+  {"id":"p10","name":"Gachibowli Stadium Parking","area":"Gachibowli","areaType":"it","lat":17.4159,"lng":78.3488,"type":"lot","capacity":400,"ratePerHour":20,"address":"Gachibowli Stadium, Hyderabad"},
+  {"id":"p11","name":"Begumpet Road Parking","area":"Begumpet","areaType":"commercial","lat":17.4432,"lng":78.4670,"type":"lot","capacity":200,"ratePerHour":20,"address":"Old Airport Road, Begumpet"},
+  {"id":"p12","name":"Jubilee Hills Road 36 Parking","area":"Jubilee Hills","areaType":"commercial","lat":17.4310,"lng":78.4070,"type":"street","capacity":80,"ratePerHour":25,"address":"Road No 36, Jubilee Hills"},
+  {"id":"p13","name":"HITEC City SEZ Parking","area":"HITEC City","areaType":"it","lat":17.4486,"lng":78.3736,"type":"garage","capacity":1500,"ratePerHour":15,"address":"HITEC City SEZ, Hyderabad"},
+  {"id":"p14","name":"Kondapur Junction Parking","area":"Kondapur","areaType":"it","lat":17.4571,"lng":78.3648,"type":"lot","capacity":120,"ratePerHour":15,"address":"Kondapur Junction, Hyderabad"},
+  {"id":"p15","name":"Sarath City Capital Mall Parking","area":"Gachibowli","areaType":"mall","lat":17.4264,"lng":78.3461,"type":"mall","capacity":900,"ratePerHour":30,"address":"Sarath City Capital Mall, Gachibowli"}
+]
